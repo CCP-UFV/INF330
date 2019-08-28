@@ -1,0 +1,211 @@
+G é dito simples se não possui arestas múltiplas e nem laços.
+
+G1 é isomorfo a G2 sse: exite uma bijeção Ө: V(G1) → V(G2) tal que existe uma aresta uv
+em E(G1) ↔ existe uma aresta Ө(u)Ө(v) em E(G2).
+
+G é finito se tanto V quanto E são conjuntos finitos.
+
+G é vazio se (E)={}.
+G é um grafo trivial se for simples e sua ordem for 1. (consequentemente, |E|=0 , porque?)
+G é um grafo nulo se sua ordem for 0.
+
+G é um grafo completo se G for um grafo simples e todo par de vértices estiver ligado por uma aresta.
+Quantos vértices um Kn possui? n(n-1)/2
+
+G é um grafo bipartido ↔ V(G) pode ser dividido em dois conjuntos
+disjuntos X,Y tais que cada aresta de E(G) conecta um vértice de X a um
+vértice de Y.
+
+G é um grafo bipartido completo ↔ G é simples, bipartido e cada vértice de X é adjacente a todo vértice
+de Y.
+Quantas arestas um Km,n possui? m*n
+
+G é um grafo planar se existir uma representação gráfica de G tal que as
+arestas de E não se cruzem nesta representação.
+
+Matriz de incidência
+A matriz de incidência M de G é uma matriz de dimensões |V|x|E| onde o
+elemento M(i,j) indica o número de vezes que o
+vértice V(i) e a aresta E(j) são incidentes.
+M(i,j) = 0 (quando não há incidência), 1 (quando a aresta incide uma vez no
+vértice) ou 2 (quando a aresta representa um loop).
+
+A matriz de adjacência A de G é uma matriz de dimensões |V|x|V| / V(i,j) indica o número de arestas que liga o vértice V(i) ao vértice V(j).
+
+H é um subgrafo de G (denotado por H ⊆ G) ↔ E(H) ⊆ E(G) e V(H) ⊆ V(G).
+H é um subgrafo de G e H ≠ G → H é um subgrafo próprio de G. (denotado por H ⊂ G )
+H é um subgrafo de G → G é um supergrafo de H.
+
+Um grafo H é um subgrafo gerador de G ↔ H ⊆ G e
+V(H) = V(G).
+H é um subgrafo de G induzido por V' se:
+V(H) = V', V' ⊆ V(G) e V' ≠ {}. H é denotado por G[V'].
+O subgrafo induzido G[V\V'] é denotado por G-V'.
+
+H é um subgrafo de G induzido por E'
+se: E(H) = E', E' ⊆ E(G) e E' ≠ {}.
+O subgrafo induzido G[E\E'] é denotado por G-E'.
+O grafo obtido ao adicionar as
+arestas de E' a G é denotado por G+E'.
+
+G é um grafo r-regular → |E| = (r*|V|)/2.
+
+Um passeio em G é finito e não vazio.
+v0 é origem e vk é destino do passeio.
+Tamanho do caminho = nº de arestas nele.
+Trilha: passeio que não repete aresta.
+Caminho: trilha que não repete vértice.
+Todo passeio (u,v) contém um caminho (u,v).
+
+Um passeio é fechado se sua origem e destino são os mesmos
+vértices.
+Uma trilha fechada é chamada de circuito.
+Uma circuito onde os únicos vértices repetidos são a origem e o
+destino é chamada de ciclo.
+
+Circuito Euleriano: Visita todas as arestas de um grafo.
+Ciclo Hamiltoniano: Visita todos os vértices de um grafo.
+'
+Um grafo é euleriano ↔ não possuir vértices de grau ímpar.
+Trilha euleriana é uma trilha que inclui todas arestas do grafo.
+Um grafo que possui uma trilha euleriana mas não possui um circuito euleriano é chamado de semi-euleriano.
+Um grafo conectado é semi-euleriano ↔ possui exatamente dois vértices de grau ímpar.
+
+Se G é um grafo simples com v ≥ 3 e δ ≥ v/2, então G é hamiltoniano.
+Um caminho hamiltoniano inclui todos os vértices do grafo.
+Um grafo que possui um caminho hamiltoniano mas não um ciclo hamiltoniano é chamado de semi-hamiltoniano.
+
+Árvore é um grafo acíclico conexo.
+Folha: vértice com d(v) = 1.
+Vértice Interno: vértice que não é folha.
+|V(T)| > 1 → folhas de T ≥ 2.
+Floresta é um grafo acíclico.
+|E|=|V| - nº de componentes de G.
+
+Distancia (denotado por distancia(v,x)) entre v e x: número de arestas no menor caminho entre os vértices.
+Excentricidade (denotado por excentricidade(v)) de v: max(distancia(v,x)) ∀ x ∈ V(G).
+Raio (denotado por raio(G)) de um grafo é a excentricidade mínima.
+Diâmetro (denotado por diametro(G)) de um grafo é a excentricidade máxima.
+Um vértice v de G é central ↔ excentricidade(v) = raio(G).
+
+Seja T / |V(T)| ≥ 3 e T* obtida após remover as folhas de T. T e T* possuem o mesmo centro C.
+O centro de uma árvore possui 1 ou 2 vértices.
+
+Uma aresta e de um grafo G é uma ponte ↔ e não pertence a nenhum ciclo de G.
+Um vértice v de uma árvore G é uma articulação ↔ grau(v) > 1.
+Um corte de vértices/arestas V'/E' de um grafo G é um conjunto de vértices/arestas V'/E' ⊆ V/E tal que o grafo G-(V'/E') é desconexo.
+
+Árvore geradora.
+Todo grafo conexo contém uma árvore geradora.
+
+Árvore com raiz cheia a completa.
+
+Planaridade:
+O crossing-number cr(G) de um grafo G é o número mínimo necessário de cruzamentos de arestas para desenhar G no plano.
+Fórmula de Euler: |V| + F = |E| + 2.
+
+Um grafo planar é chamado de planar maximal se a adição de uma aresta qualquer o tornar não planar.
+Nestes grafos, todas as faces são limitadas por 3 arestas.
+Kn para n>4 não é planar. Kuratowski
+Km,n não é planar para n,m ≥ 3.
+Um grafo é planar ↔ ele não contém nenhum subgrafo homeomórfico a um grafo de Kuratowski.
+
+Um conjunto independente ou estável de um grafo G é um subconjunto S de V(G) onde nenhum par de vértices de S é adjacente em G.
+Em outras palavras, um subconjunto S de V(G) é um conjunto independente ↔ E(G[S]) for vazio.
+Um conjunto independente  de um grafo G é maximal se não ele não for subconjunto de nenhum conjunto independente maior.
+Um conjunto independente S de um grafo G é máximo se não existir outro conjunto independente S' de G onde |S'|>|S|.
+O número de independência de G (denotado por a(G)) é o número de vértices em um conjunto independente máximo de G.
+Uma cobertura de um grafo G é um subconjunto S de V(G) onde todas as arestas de E(G) são incidentes a pelo menos um vértice de S.
+Uma cobertura S de um grafo G é mínima ↔ não exite outra cobertura S' de G tal que 
+|S'|<|S|.
+O número de cobertura de G (denotado por b(G)) é o número de vértices na cobertura mínima de G.
+Um conjunto independente ou estável de arestas (também chamado de matching ou emparelhamento) de um grafo G é um subconjunto S de E(G) onde nenhum par de arestas em S são adjacentes em G.
+Um matching S é máximo se não existe nenhum outro matching S' tal que |S'| > |S|.
+O número de independência (também chamado de índice de estabilidade) de arestas de um grafo G (denotado por a'(G)) é o número de arestas em um matching  máximo de G.
+Uma cobertura de arestas de um grafo G é um subconjunto S de E(G) onde todos os vértices de V(G) são incidentes a alguma aresta em S.
+Uma cobertura por arestas S de G é mínima se não existe nenhuma cobertura por arestas S' tal que |S'|<|S|.
+O número de cobertura por arestas de G é o tamanho da cobertura mínima por arestas de G e é denotado por b'(G).
+Um clique de um grafo G é um subconjunto S de V(G) onde G[S] é um grafo completo.
+Em outras palavras, um clique é um conjunto de vértices que forma um subgrafo completo de G.
+Um clique S de um grafo G é máximo se não existir outro clique S' em G tal que |S'|>|S|.
+Note que um conjunto S ⊆ V(G) é um clique ↔ S for um conjunto independente em G.
+Logo, cliques e conjuntos independentes são conceitos complementares.
+Método para encontrar um conjunto independente máximo: 
+Gerar todos os subconjuntos de V(G) e verificar qual deles é o maior subconjunto que é independente.
+Esta abordagem é MUITO ineficiente (exponencial). Porém, não se conhece (e talvez nem exista) abordagem que seja substancialmente mais rápida. 
+Também não se conhece um método eficiente para se obter um clique máximo em um determinado grafo.
+
+
+Conjunto independente ou estável S: nenhum par de vértice em S é adjacente.
+
+Conjunto independente de arestas S: nenhum par de arestas em S é adjacente.
+ 
+Cobertura de vértices S: todas arestas do grafo são incidentes a pelo menos um vértice de S.
+ 
+Cobertura de arestas S: todos vértices do grafo são incidentes a alguma aresta de S.
+ 
+Clique: conjuntos de vértices que forma um subgrafo completo.
+
+Um matching M é perfeito se ele envolver todos os vértices do grafo.
+Caminho M-alternado em G: caminho em G cujas arestas estão alternadamente em M e em E(G)-M. O caminho começa com arestas que não estão em M.
+Caminho M-aumentante em G: caminho M-alternado em G cujos vértices inicial e final não estejam saturados em M.
+Um matching M em G é um matching máximo ↔ não existir um caminho M-aumentante em G.  
+Corolário do casamento: Se G é um grafo k-regular bipartido com k>0, então G possui um matching perfeito.
+
+k-colorível, número cromático
+A junção de G e H tem: χ(G+H) =  χ(G)  + χ(H)
+
+Completo
+|V|
+Bipartido (exceto...)
+2
+Caminho (exceto...)
+2
+Árvore (exceto...)
+2
+Ciclo com |V| par
+2
+Ciclo com |V| ímpar
+3
+Wheel com |V| par
+4
+Wheel com |V| ímpar
+3
+
+Qual o número mínimo necessário de cores para se colorir qualquer mapa? 4.
+
+k-colorível em arestas, índice cromático
+Para grafos simples, χ' = Δ ou Δ+1
+ Caminho com |V|>2
+2
+Ciclo com |V| par 
+2
+Ciclo com |V| ímpar
+3
+Bipartido 
+Δ
+Árvore
+Δ
+Completo com |V| par
+|V|-1
+Completo com |V| ímpar
+|V|
+Wheel 
+|V|-1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
